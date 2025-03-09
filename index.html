@@ -4,10 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+
+    <!-- css style -->
     <link rel="stylesheet" href="styles/style.css">
+
+    <!-- remix icon cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 </head>
-<body>
-    
+<body class="inter-regular">
+    <section id="container">
+        <header>
+            <form id="input-form">
+                <i id="input-icon" class="ri-search-line"></i>
+                <input id="input-field" type="text" placeholder="Search your city...">
+            </form>
+        </header>
+        <main>
+            <h1 id="weather-city">London, United Kingdom</h1>
+            <p id="weather-forcast">Clouds</p>
+            <div id="weather-icon"></div>
+            <p id="weather-tem">245</p>
+            <div class="weather-min-max">
+                <p id="weather-min">Min: 234</p>
+                <p id="weather-max">Max: 453</p>
+            </div>
+
+        </main>
+        <footer>
+            <div class="card">
+                <div>
+                    <i class="ri-drop-fill"></i>
+                </div>
+                <div class="icon">
+                    <p>Feels Like</p>
+                    <p id="feels-like">270</p>
+                </div>
+              
+            </div>
+            <div class="card">
+                <div>
+                    <i class="ri-drop-fill"></i>
+                </div>
+                <div class="icon">
+                    <p>Humidity</p>
+                    <p id="feels-like">270</p>
+                </div>
+              
+            </div>
+            <div class="card">
+                <div>
+                    <i class="ri-windy-line"></i>
+                </div>
+                <div class="icon">
+                    <p>Wind</p>
+                    <p id="feels-like">270</p>
+                </div>
+              
+            </div>
+            <div class="card">
+                <div>
+                    <i class="ri-speed-up-fill"></i>
+                </div>
+                <div class="icon">
+                    <p>Pressure</p>
+                    <p id="feels-like">270</p>
+                </div>
+              
+            </div>
+            
+            
+        </footer>
+    </section>
+
+
+
     <script src="scripts/script.js"></script>
 </body>
 </html>
