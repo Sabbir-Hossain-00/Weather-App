@@ -12,7 +12,7 @@ const weatherWind = document.getElementById("wind");
 const weatherPressure = document.getElementById("pressure");
 
 const apiKey = "d8f10f0caa3d5906d54efdc9cdab25d4"
-let city = "Dhaka" ;
+let city = "shibchar" ;
 
 const getCountry = (code)=>{
     return new Intl.DisplayNames([code], { type: 'region' }).of(code);
