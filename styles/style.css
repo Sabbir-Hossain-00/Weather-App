@@ -103,6 +103,9 @@ footer{
     body{
         padding: 0 20px;
     }
+    #input-field{
+        width: 250px;
+    }
     #container{
         display: flex;
         justify-content: center;
@@ -113,8 +116,10 @@ footer{
         font-size: 23px;
         margin-bottom: 5px;
     }
-    #we
     .card{
-        font-size: 13px;
+        padding: 10px;
+    }
+    .card p{
+        font-size: 10px;
     }
 }
