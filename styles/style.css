@@ -72,7 +72,12 @@ main{
     padding: 9px 15px;
     border-radius: 25px;
 }
-
+#weather-icon{
+    width: 100px; 
+    height: 100px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4));
+    border-radius: 100%;
+}
 #weather-tem{
     font-size: 25px;
     font-weight: 400;

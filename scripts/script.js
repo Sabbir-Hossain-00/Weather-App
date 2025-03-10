@@ -28,7 +28,7 @@ document.getElementById("input-form"),addEventListener("submit",(e)=>{
 
 
 const fetchApi = async ()=>{
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     try{
        const response = await fetch(apiUrl);
@@ -38,21 +38,21 @@ const fetchApi = async ()=>{
 
        weatherCity.innerText = `${name}, ${getCountry(sys.country)}`;
 
-       weatherIcon.innerHTML = `
-       <img src = "https://openweathermap.org/img/wn/${weather[0].icon}@2x.png">
-       `
+       const iconUrl = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`
+
+       weatherIcon.src= iconUrl ;
 
        weatherForcast.innerText = weather[0].main;
 
-       weatherTem.innerText = main.temp;
+       weatherTem.innerText = `${main.temp}°C`;
 
-       weatherMinTem.innerText = main.temp_min;
-       weatherMaxTem.innerText = main.temp_max;
+       weatherMinTem.innerText = `Min: ${main.temp_min.toFixed()}°C`;
+       weatherMaxTem.innerText = `Max: ${main.temp_max.toFixed()}°C`;
 
-       weatherFeelsLike.innerText = main.feels_like ;
-       weatherHumidity.innerText = main.humidity ;
-       weatherWind.innerText = wind.speed ;
-       weatherPressure.innerText = main.pressure ;
+       weatherFeelsLike.innerText = `${main.feels_like}°C` ;
+       weatherHumidity.innerText = `${main.humidity} %` ;
+       weatherWind.innerText = `${wind.speed} m/s` ;
+       weatherPressure.innerText = `${main.pressure} hpa` ;
 
 
     }catch(error){
